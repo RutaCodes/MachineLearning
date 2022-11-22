@@ -1,4 +1,7 @@
-Include python notebook file called "implementation" explaining how to deal with uneven groups in data.
+Include jupyter notebook file called "implementation" explaining how to deal with uneven groups in data.
+
+Good resource:
+https://towardsdatascience.com/complete-guide-to-pythons-cross-validation-with-examples-a9676b5cac12
 
 When dataset has multiple uneven groups, it is necessary to split this data maintaining the same percentage in each group. This way allows us to ensure that sufficient amount of data is used to train and test the model from each group. It also allows to avoid bias that could result from training the model with unstratified data i.e. when majority of training data comes from a few groups creating a posiboloty that model will not fit data that comes from those unrepresneted groups, as there was limited data from then that was used during the model training. 
 
