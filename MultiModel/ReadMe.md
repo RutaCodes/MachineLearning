@@ -1,11 +1,17 @@
-*run_models_x.py* - function that uses cross validation to split specified dataset and compares results from multiple models 
+*run_models_multi_score.py* - function that uses cross validation to split specified dataset and compares results from multiple models 
 
-This function uses default 5-fold cross validation data splitting strategy to compare scores (r2) from 5 models:
+This function uses default 5-fold cross validation data splitting strategy to compare scores (e.g. RMSE) from 5 models:
 - Linear Regression 
 - Random Forest Regressor
 - Support Vector Regressor
 - Gradient Boosting Regressor
 - XGBoost Regressor
+
+Cross validation uses 3 scores to evaluate model performance:
+- R2
+- MSE
+- RMSE
+Scores from train and test sets are reported.
 
 A few algorithms used in this function have certain requirements to be used efficiently:
 - SVM algorithms are not scale invariant, so it is highly recommended to scale data before using it to train model
