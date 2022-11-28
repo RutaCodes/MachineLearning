@@ -61,6 +61,7 @@ plt.ylabel("R2")
 plt.title("R2 vs Random State (Train data)")
 plt.legend()
 plt.savefig("Random_state_results_train.pdf")
+
 #%%
 # Plotting results
 plt.plot(df_test_rs["Random_state"].astype(float), df_test_rs["LinReg"].astype(float), label="LinReg") 
@@ -73,12 +74,8 @@ plt.ylabel("R2")
 plt.title("R2 vs Random State (Test data)")
 plt.legend()
 plt.savefig("Random_state_results_test.pdf")
+
 #%% Which random state has the highest cumulative R2?
 Cum_r2 =  np.sum(np.array(df_test_rs.iloc[:,range(1,6)]), axis=1)
 np.where(Cum_r2 == np.max(Cum_r2))[0]
-#Random state = 23 leads to highest culumative r2 value for all models
-
-#Test if its is the same for top 3 models: RF, GBC, XGBoost
-Cum_r2_h =  np.sum(np.array(df_test_rs.iloc[:,range(3,6)]), axis=1)
-np.where(Cum_r2_h == np.max(Cum_r2_h))[0]
-# It is, since r2 are the highest for these 3 models therefore they influnce cumulative r2 the most
+#Random state = 23 leads to highest culumative R2 
