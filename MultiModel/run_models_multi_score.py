@@ -21,7 +21,7 @@ def run_models_multi_score(x_train: pd.DataFrame , y_train: pd.DataFrame):
             ('RF', RandomForestRegressor()),
             ('XGB', XGBRegressor()),
             ('SVR',SVR(kernel="rbf", C=10, gamma="auto")),
-            ('GBC',GradientBoostingRegressor()),
+            ('GBC',GradientBoostingRegressor())
     ]
         
     score = ["r2","neg_mean_squared_error","neg_root_mean_squared_error"]
