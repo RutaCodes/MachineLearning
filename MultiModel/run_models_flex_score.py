@@ -20,7 +20,7 @@ def run_models_flex_score(x_train: pd.DataFrame , y_train: pd.DataFrame, score):
             ('RF', RandomForestRegressor()),
             ('XGB', XGBRegressor()),
             ('SVR',SVR(kernel="rbf", C=10, gamma="auto")),
-            ('GBC',GradientBoostingRegressor()),
+            ('GBC',GradientBoostingRegressor())
     ]
     
     df_test = pd.DataFrame()
