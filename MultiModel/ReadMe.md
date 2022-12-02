@@ -15,6 +15,8 @@ Scores from train and test sets are reported.
 
 *run_models_multi_score.py* - function that uses cross validation to evaluate multiple models using specified score metric (e.g. R2) and returns train + test results from each fold
 
+*run_models_cross_val.py* - function that uses nested cross-validation (*RepeatedKFold*) repeating cross validation with k-folds *n_repeat* number of times
+
 A few algorithms used in this function have certain requirements to be used efficiently:
 - SVM algorithms are not scale invariant, so it is highly recommended to scale data before using it to train model
 - Regression models are sensitive to multicollinearity. It creates a problem in regression models because the inputs are all influencing each other, and it is difficult to efficeintly estimate paramater coeffieints.
