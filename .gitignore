@@ -1,11 +1,8 @@
 # Ignore Folders that are not complete
-
-node_modules/
-
-# Ignore all files ending in ".csv"
-.csv
-
-# Build results - Ignore all files in these folders found at any folder depth
+# Ignore all files in these folders found at any folder depth
 Confidence Intervals/
 Neural Networks/
 StratifiedShuffleSplit/
+
+# Ignore all files ending in ".csv"
+.csv
