@@ -6,7 +6,6 @@ node_modules/
 .csv
 
 # Build results - Ignore all files in these folders found at any folder depth
-[Dd]ebug/
-[Rr]elease/
-x64/
-x86/
+Confidence Intervals/
+Neural Networks/
+StratifiedShuffleSplit/
