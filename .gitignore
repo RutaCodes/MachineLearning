@@ -1,7 +1,5 @@
 # Ignore Folders that are not complete
 # Ignore all files in these folders found at any folder depth
-Confidence Intervals/
-Neural Networks/
 StratifiedShuffleSplit/
 
 # Ignore all files ending in ".csv"
