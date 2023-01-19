@@ -33,11 +33,13 @@ Depend_var = All_tr_variables_arr[:, 2].reshape(-1,1)
 
 Rand_state = np.array(range(0,101))
 
-#Running models with cross validation
+#Loading function that models data using 5 algorithms 
 from run_models_sample_test import run_models_sample_test
+
 #Choosing scoring metric
 score = 'r2'
 
+#Running models with cross validation and testing different random states 
 df_train_rs = pd.DataFrame()
 df_test_rs = pd.DataFrame()
 for i in Rand_state:
@@ -49,8 +51,9 @@ for i in Rand_state:
     Res_df_line_rs_test = pd.concat([pd.DataFrame([i], columns=["Random_state"]), Results[1]], axis=1)
     df_test_rs = df_test_rs.append(Res_df_line_rs_test) #test results
     
-#%%
-# Plotting results
+#%% VISUALIZING RESULTS
+
+# Plotting train results
 plt.plot(df_train_rs["Random_state"].astype(float), df_train_rs["LinReg"].astype(float), label="LinReg") 
 plt.plot(df_train_rs["Random_state"].astype(float), df_train_rs["SVR"].astype(float), label="SVR") 
 plt.plot(df_train_rs["Random_state"].astype(float), df_train_rs["RF"].astype(float), label="RF") 
@@ -63,7 +66,7 @@ plt.legend()
 plt.savefig("Random_state_results_train.pdf")
 
 #%%
-# Plotting results
+# Plotting test results
 plt.plot(df_test_rs["Random_state"].astype(float), df_test_rs["LinReg"].astype(float), label="LinReg") 
 plt.plot(df_test_rs["Random_state"].astype(float), df_test_rs["SVR"].astype(float), label="SVR") 
 plt.plot(df_test_rs["Random_state"].astype(float), df_test_rs["RF"].astype(float), label="RF") 
