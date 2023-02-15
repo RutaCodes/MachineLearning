@@ -10,7 +10,8 @@ This function uses default 5-fold cross validation data splitting strategy to co
 Cross validation uses 3 scores to evaluate model performance:
 - R2
 - MSE
-- RMSE
+- RMSE 
+
 Scores from train and test sets are reported.
 
 *run_models_multi_score.py* - function that uses cross validation to evaluate multiple models using specified score metric (e.g. R2) and returns train + test results from each fold
